@@ -69,6 +69,7 @@ const App: React.FC<AppProps> = ({ className }) => {
     editUUid: number | string
   ) => {
     if (editUUid === -1 || editUUid !== item.uuid) {
+      //非空断言
       setEditUUid(item.uuid!);
       setState(item.text!);
     } else {
